@@ -541,7 +541,35 @@ export default function ProfilePage() {
                   </Typography>
                 )}
                 
+                <Box sx={{ mt: 2, mb: 1 }}>
+                  <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 0.5 }}>
+                    <Typography variant="body2">Completion</Typography>
+                    <Typography variant="body2">{progress.completionPercentage || 0}%</Typography>
+                  </Box>
+                  <Box sx={{ width: '100%', backgroundColor: '#eee', borderRadius: 1, height: 8, overflow: 'hidden' }}>
+                    <Box 
+                      sx={{ 
+                        width: `${progress.completionPercentage || 0}%`,
+                        height: '100%',
+                        backgroundColor: 'primary.main'
+                      }}
+                    />
+                  </Box>
+                </Box>
                 
+                {progress.skills?.length > 0 && (
+                  <Box sx={{ mt: 2, display: 'flex', flexWrap: 'wrap', gap: 0.5 }}>
+                    {progress.skills.map(skill => (
+                      <Chip
+                        key={skill}
+                        label={skill}
+                        size="small"
+                        variant="outlined"
+                        onClick={() => navigate(`/explore?skill=${encodeURIComponent(skill)}`)}
+                      />
+                    ))}
+                  </Box>
+                )}
                 
                 {progress.resourceUrl && (
                   <Button 
