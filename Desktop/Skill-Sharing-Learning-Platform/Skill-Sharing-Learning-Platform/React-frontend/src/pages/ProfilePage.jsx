@@ -40,7 +40,7 @@ export default function ProfilePage() {
   const navigate = useNavigate();
   const queryClient = useQueryClient();
 
-  // Determine if this is the current user's profile
+  
   const isOwnProfile = currentUser?.id === userId;
 
   // Fetch user data - use the correct endpoint based on whether it's the current user or another user
