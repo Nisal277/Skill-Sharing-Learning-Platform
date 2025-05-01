@@ -106,7 +106,7 @@ export default function CommentSection({ postId }) {
   const handleSubmitComment = (e) => {
     e.preventDefault();
     if (commentText.trim()) {
-      // Create a proper comment object with content property
+      // Create a proper comment object with cntent property
       addCommentMutation.mutate({ content: commentText.trim() });
     }
   };
