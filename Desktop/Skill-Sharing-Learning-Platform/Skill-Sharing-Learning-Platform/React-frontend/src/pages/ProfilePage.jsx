@@ -186,7 +186,7 @@ export default function ProfilePage() {
   };
 
   // Extract user data from response
-  // Handle different response formats from different endpoints
+  // Handle various response formats from endpoints
   const user = userData?.data?.data || userData?.data || userData;
   const isFollowing = user?.isFollowing || false;  
   // Extract posts and learning plans
@@ -299,7 +299,7 @@ export default function ProfilePage() {
             </Typography>
           )}
 
-          {/* Stats */}
+          {/*Statistics*/}
           <Box sx={{ display: 'flex', gap: 3, my: 2 }}>
             <Box 
               sx={{ cursor: 'pointer' }}
