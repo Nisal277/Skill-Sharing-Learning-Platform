@@ -71,7 +71,7 @@ export default function Layout() {
     () => notificationApi.getUnreadCount(),
     { 
       enabled: isAuthenticated,
-      refetchInterval: 30000, // Refresh every 30 seconds
+      refetchInterval: 30000, // Refresh every 30 secnds
     }
   );
 
