@@ -46,7 +46,7 @@ export default function CommentSection({ postId }) {
         // Invalidate comment data
         queryClient.invalidateQueries(['comments', postId]);
         
-        // Also invalidate queries that might show comment counts
+        // Also invalidate queries that might show commen counts
         queryClient.invalidateQueries(['post', postId]);
         queryClient.invalidateQueries(['userPosts']);
         queryClient.invalidateQueries(['feed']);
