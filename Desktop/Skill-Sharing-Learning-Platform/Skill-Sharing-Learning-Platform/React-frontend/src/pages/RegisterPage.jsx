@@ -57,7 +57,7 @@ export default function RegisterPage() {
         // Move to next step
         setActiveStep(1);
       } else {
-        // Final submission
+        // Complete the final submission
         setIsLoading(true);
         setError('');
         
@@ -91,7 +91,7 @@ export default function RegisterPage() {
           );
           
           if (result && result.success) {
-            // Redirect to login page with success message
+           // Go to login page with a success message
             navigate('/login', { state: { message: 'Registration successful! Please sign in.' } });
           } else {
             setError(result?.message || 'Registration failed. Please try again.');
