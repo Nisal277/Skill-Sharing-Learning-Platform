@@ -134,7 +134,7 @@ export default function PostPage() {
   const handleReplyClick = (commentId, username) => {
     setReplyToId(commentId);
     setReplyToUser(username);
-    // Focus the comment input
+    // Focus on the comment input
     const commentInput = document.getElementById('comment-input');
     if (commentInput) {
       commentInput.focus();
