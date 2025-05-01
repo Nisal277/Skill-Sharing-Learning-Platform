@@ -1,6 +1,6 @@
 import { Box, Typography, Container, Link, Divider } from '@mui/material';
 
-export default function Footer() {
+export default function Footer() {//footer function
   return (
     <Box
       component="footer"
