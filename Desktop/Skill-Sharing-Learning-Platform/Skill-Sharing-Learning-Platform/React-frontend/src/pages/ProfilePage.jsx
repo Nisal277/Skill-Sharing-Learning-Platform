@@ -43,7 +43,7 @@ export default function ProfilePage() {
   
   const isOwnProfile = currentUser?.id === userId;
 
-  // Fetch user data - use the correct endpoint based on whether it's the current user or another user
+  
   const { data: userData, isLoading: userLoading, error: userError } = useQuery(
     ['user', userId],
     () => isOwnProfile ? userApi.getUser() : userApi.getUserById(userId),
