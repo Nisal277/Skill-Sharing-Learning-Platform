@@ -7,7 +7,7 @@ import { Home as HomeIcon } from '@mui/icons-material';
 export default function NotFoundPage({ message }) {
   const navigate = useNavigate();
 
-  return (
+  return (                  //notfound pge
     <Container maxWidth="sm">
       <Paper
         elevation={3}
