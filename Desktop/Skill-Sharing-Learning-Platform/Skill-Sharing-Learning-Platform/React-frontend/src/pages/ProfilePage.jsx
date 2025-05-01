@@ -68,7 +68,7 @@ export default function ProfilePage() {
     }
   );
 
-  // Fetch user learning plans
+  
   const { data: learningPlansData, isLoading: plansLoading } = useQuery(
     ['userLearningPlans', userId],
     () => learningPlanApi.getUserPlans(userId),
