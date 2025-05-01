@@ -36,7 +36,7 @@ export default function PostPage() {
   const location = useLocation();
   const queryClient = useQueryClient();
 
-  // Check if comment input should be aimed
+  // Check if comment input should be focused
   useEffect(() => {
     const searchParams = new URLSearchParams(location.search);
     if (searchParams.get('focus') === 'comments') {
