@@ -14,7 +14,7 @@ export default function SkillsSidebar() {
     () => userApi.getSuggestedUsers(),
     {
       enabled: true,
-      staleTime: 300000, // 5 minutes
+      staleTime: 300000, // 5 mins
     }
   );
   
