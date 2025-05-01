@@ -215,22 +215,7 @@ export default function ProfilePage() {
     );
   }
 
-  if (userError || !user) {
-    return (
-      <Container maxWidth="md" sx={{ py: 8, textAlign: 'center' }}>
-        <Typography variant="h5" gutterBottom>
-          User not found
-        </Typography>
-        <Button 
-          variant="contained" 
-          onClick={() => navigate('/')}
-          sx={{ mt: 2 }}
-        >
-          Go to Home
-        </Button>
-      </Container>
-    );
-  }
+  
 
   return (
     <Container maxWidth="lg">
