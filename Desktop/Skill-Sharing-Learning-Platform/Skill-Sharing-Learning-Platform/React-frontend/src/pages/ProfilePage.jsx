@@ -119,7 +119,21 @@ export default function ProfilePage() {
   );
   
   // Delete progress mutation
-  
+  const deleteProgressMutation = useMutation(
+    (progressId) => learningProgressApi.deleteProgress(progressId),
+    {
+      onSuccess: () => {
+        queryClient.invalidateQueries(['userProgress', userId]);
+        setErrorMessage("Learning progress deleted successfully.");
+        setShowError(true);
+      },
+      onError: (error) => {
+        console.error("Error deleting progress:", error);
+        setErrorMessage("Failed to delete learning progress. Please try again.");
+        setShowError(true);
+      }
+    }
+  );
 
   const handleTabChange = (event, newValue) => {
     setTabValue(newValue);
