@@ -205,7 +205,7 @@ export default function PostPage() {
       {/* Post */}
       {post && <PostCard post={post} />}
 
-      {/* Comments Section */}
+      {/* Comments part */}
       <Paper sx={{ p: 3, mt: 3 }} id="comments-section">
         <Typography variant="h6" gutterBottom>
           Comments ({post?.commentCount || 0})
