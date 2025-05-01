@@ -58,7 +58,7 @@ export default function ProfilePage() {
     }
   );
 
-  // Fetch user posts
+  
   const { data: postsData, isLoading: postsLoading } = useQuery(
     ['userPosts', userId],
     () => postApi.getUserPosts(userId),
