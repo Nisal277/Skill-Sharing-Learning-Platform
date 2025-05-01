@@ -119,7 +119,7 @@ export default function LearningPlanPage() {
 
   const handleEditStep = (step) => {
     setEditingStep(step);
-    // Fix: Set the edited content based on the step's content, description, or title
+    // Fix: Set the edited content based on the step's content, descriptn, or title
     setEditedStepContent(step.content || step.description || step.title || '');
   };
 
