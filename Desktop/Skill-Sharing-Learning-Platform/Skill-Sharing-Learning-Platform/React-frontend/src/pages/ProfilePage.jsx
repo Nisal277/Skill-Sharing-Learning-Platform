@@ -78,7 +78,7 @@ export default function ProfilePage() {
     }
   );
   
-  // Fetch user learning progress
+  
   const { data: progressData, isLoading: progressLoading } = useQuery(
     ['userProgress', userId],
     () => learningProgressApi.getUserProgress(userId),
