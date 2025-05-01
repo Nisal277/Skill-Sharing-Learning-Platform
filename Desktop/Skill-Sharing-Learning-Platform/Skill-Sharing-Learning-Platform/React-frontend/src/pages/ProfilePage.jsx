@@ -40,7 +40,7 @@ export default function ProfilePage() {
   const navigate = useNavigate();
   const queryClient = useQueryClient();
 
-  // Determine if this is the current user's profile
+  // Determine if this  is the current user's profile
   const isOwnProfile = currentUser?.id === userId;
 
   // Fetch user data - use the correct endpoint based on whether it's the current user or another user
@@ -58,7 +58,7 @@ export default function ProfilePage() {
     }
   );
 
-  // Fetch user posts
+  // Retrieve posts created by the user
   const { data: postsData, isLoading: postsLoading } = useQuery(
     ['userPosts', userId],
     () => postApi.getUserPosts(userId),
@@ -88,7 +88,7 @@ export default function ProfilePage() {
     }
   );
 
-  // Follow user mutation
+  // Send request to follow the specified user
   const followMutation = useMutation(
     () => userApi.followUser(userId),
     {
@@ -103,7 +103,7 @@ export default function ProfilePage() {
     }
   );
 
-  // Unfollow user mutation
+  // Send request to unfollow the specified user
   const unfollowMutation = useMutation(
     () => userApi.unfollowUser(userId),
     {
