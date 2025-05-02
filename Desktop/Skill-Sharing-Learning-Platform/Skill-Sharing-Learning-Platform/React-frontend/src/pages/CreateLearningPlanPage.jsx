@@ -106,7 +106,7 @@ export default function CreateLearningPlanPage() {
   };
 
   const handleSkillDelete = (skillToDelete) => {
-    formik.setFieldValue(
+    formik.setFieldValue(//
       'skills',
       formik.values.skills.filter((skill) => skill !== skillToDelete)
     );
