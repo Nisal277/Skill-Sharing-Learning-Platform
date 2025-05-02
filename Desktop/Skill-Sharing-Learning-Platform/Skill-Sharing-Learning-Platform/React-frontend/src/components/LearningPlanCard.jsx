@@ -63,7 +63,7 @@ export default function LearningPlanCard({ learningPlan, isOwner = false }) {
     setConfirmDelete(false);
   };
 
-  return (
+  return (            //learinh plan
     <Card elevation={2}>
       <CardContent>
         <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', mb: 2 }}>
