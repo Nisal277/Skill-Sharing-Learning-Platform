@@ -25,7 +25,7 @@ const validationSchema = Yup.object({
 });
 
 export default function CreateLearningPlanPage() {
-  const { planId } = useParams();
+  const { planId } = useParams();    // Get the planId from URL params
   const navigate = useNavigate();
   const [newSkill, setNewSkill] = useState('');
   const [error, setError] = useState('');
