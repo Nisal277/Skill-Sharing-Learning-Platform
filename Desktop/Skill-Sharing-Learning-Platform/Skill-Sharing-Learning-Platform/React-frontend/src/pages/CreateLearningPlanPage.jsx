@@ -91,7 +91,7 @@ export default function CreateLearningPlanPage() {
         skills: plan.skills || [],
       });
     }
-  }, [planData, isEditMode]);
+  }, [planData, isEditMode]);//fdf
 
   const handleSkillAdd = () => {
     const skill = newSkill.trim();
