@@ -26,10 +26,10 @@ const validationSchema = Yup.object({
 
 export default function CreateLearningPlanPage() {
   const { planId } = useParams();    // Get the planId from URL params
-  const navigate = useNavigate();
-  const [newSkill, setNewSkill] = useState('');
-  const [error, setError] = useState('');
-  const isEditMode = !!planId;
+  const navigate = useNavigate();// Used for navigation
+  const [newSkill, setNewSkill] = useState(''); // State to store new skill input
+  const [error, setError] = useState('');// State for error messages
+  const isEditMode = !!planId;// Check if in edit mode (if planId exists)
 
   const { data: planData, isLoading: fetchLoading } = useQuery(
     ['learningPlan', planId],
