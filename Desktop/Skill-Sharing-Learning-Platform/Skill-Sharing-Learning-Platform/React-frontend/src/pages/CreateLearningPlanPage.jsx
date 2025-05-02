@@ -15,7 +15,7 @@ import { learningPlanApi } from '../services/api';
 const validationSchema = Yup.object({
   title: Yup.string()
     .required('Title is required')    // Title must be filled
-    .max(100, 'Title must be at most 100 characters'),
+    .max(100, 'Title must be at most 100 characters'),    // Max length 100
   description: Yup.string()
     .required('Description is required')
     .max(1000, 'Description must be at most 1000 characters'),
