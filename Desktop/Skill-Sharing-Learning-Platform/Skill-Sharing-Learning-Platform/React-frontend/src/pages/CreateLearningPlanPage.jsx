@@ -21,7 +21,7 @@ const validationSchema = Yup.object({
     .max(1000, 'Description must be at most 1000 characters'),
   skills: Yup.array()
     .min(1, 'At least one skill is required')    // Minimum one skill
-    .max(10, 'Maximum 10 skills are allowed'),
+    .max(10, 'Maximum 10 skills are allowed'),    // Max 10 skills
 });
 
 export default function CreateLearningPlanPage() {
