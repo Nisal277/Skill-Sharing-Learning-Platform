@@ -14,7 +14,7 @@ import { learningPlanApi } from '../services/api';
 // Define the form validation schema using Yup
 const validationSchema = Yup.object({
   title: Yup.string()
-    .required('Title is required')
+    .required('Title is required')    // Title must be filled
     .max(100, 'Title must be at most 100 characters'),
   description: Yup.string()
     .required('Description is required')
