@@ -21,6 +21,7 @@ import java.util.Map;
 @RequiredArgsConstructor// Lombok annotation to automatically generate a constructor for final fields
 public class LearningPlanController {
 
+    // Injecting the service layer to handle business logic
     private final LearningPlanService learningPlanService;
 
     @GetMapping
