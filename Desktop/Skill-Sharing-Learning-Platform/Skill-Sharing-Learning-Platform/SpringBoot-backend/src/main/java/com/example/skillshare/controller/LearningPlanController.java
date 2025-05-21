@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 
-@RestController
+@RestController    // This marks the class as a REST controller, handling HTTP requests
 @RequestMapping("/api/learning-plans")
 @RequiredArgsConstructor
 public class LearningPlanController {
