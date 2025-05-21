@@ -18,7 +18,7 @@ import java.util.Map;
 
 @RestController    // This marks the class as a REST controller, handling HTTP requests
 @RequestMapping("/api/learning-plans")    // Base URL for all endpoints in this controller
-@RequiredArgsConstructor
+@RequiredArgsConstructor// Lombok annotation to automatically generate a constructor for final fields
 public class LearningPlanController {
 
     private final LearningPlanService learningPlanService;
