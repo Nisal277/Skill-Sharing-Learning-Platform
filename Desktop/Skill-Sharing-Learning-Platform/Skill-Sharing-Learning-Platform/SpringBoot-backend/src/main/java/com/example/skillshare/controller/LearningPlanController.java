@@ -23,13 +23,13 @@ public class LearningPlanController {
 
     // Injecting the service layer to handle business logic
     private final LearningPlanService learningPlanService;
-    
+
     // Get all learning plans for the currently logged-in user (with pagination)
     @GetMapping
     public ResponseEntity<Page<LearningPlan>> getCurrentUserLearningPlans(
             @AuthenticationPrincipal UserDetails currentUser,
             @RequestParam(defaultValue = "0") int page,
-            @RequestParam(defaultValue = "10") int size) {
+            @RequestParam(defaultValue = "10") int size) {    // Page size (default is 10)
 
         Pageable pageable = PageRequest.of(page, size);
         return ResponseEntity.ok(learningPlanService.getLearningPlansByEmail(currentUser.getUsername(), pageable));
